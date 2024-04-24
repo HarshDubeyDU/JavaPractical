@@ -1,3 +1,5 @@
+package Question1;
+
 import java.util.Scanner;
 import P1.Shape;
 import P2.Rectangle;
