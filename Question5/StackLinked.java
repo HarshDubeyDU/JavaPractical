@@ -3,8 +3,8 @@ package Question5;
 public class StackLinked implements Stack {
 
     private Node top;
-    
-    public StackLinked() {
+
+    public StackLinkedList() {
         top = null;
     }
 
@@ -15,22 +15,25 @@ public class StackLinked implements Stack {
             newNode.next = top;
             top = newNode;
         } catch (OutOfMemoryError e) {
-            System.out.println("Stack memory is full, Overflow");
+            throw new RuntimeException("Overflow: No memory");
         }
     }
 
     @Override
     public int pop() {
-        try {
-            int data = top.data;
+        int data;
+        if (!isEmpty()) {
+            data = top.data;
             top = top.next;
-        } catch ()
+        } else {
+            throw new RuntimeException("Underflow: No element left");
+        }
+        return data;
     }
 
-    @Override
+
     public boolean isEmpty() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'isEmpty'");
+        return top == null;
     }
     
 }
