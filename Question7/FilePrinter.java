@@ -1,3 +1,5 @@
+package Question7;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -15,7 +17,7 @@ public class FilePrinter {
             reader.close();
             out.close();
         } catch (IOException e) {
-
+            System.out.println("File does not exists.");
         }
     }
 }
