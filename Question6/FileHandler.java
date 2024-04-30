@@ -10,9 +10,9 @@ import java.util.Scanner;
 public class FileHandler {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.print("File 1:");
+        System.out.print("File 1: ");
         String fileOneName = sc.next();
-        System.out.print("File 2:");
+        System.out.print("File 2: ");
         String fileTwoName = sc.next();
         try {
             FileReader fileOne = new FileReader(fileOneName);

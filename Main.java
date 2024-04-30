@@ -1,4 +1,3 @@
-
 import java.util.Scanner;
 import P1.Shape;
 import P2.Rectangle;
@@ -16,17 +15,17 @@ public class Main {
                 System.out.println("Enter length and width:");
                 double length = sc.nextDouble();
                 double width = sc.nextDouble();
-                return new Rectangle(length, width);
+                yield new Rectangle(length, width);
             }
             case "circle" -> {
                 System.out.println("Enter radius:");
                 double radius = sc.nextDouble();
-                return new Circle(radius);
+                yield new Circle(radius);
             }
             default -> {
                 System.out.println("Invalid shape type!");
                 sc.close();
-                return null;
+                yield null;
             }
         };
 
