@@ -4,7 +4,7 @@ public class StackLinked implements Stack {
 
     private Node top;
 
-    public StackLinkedList() {
+    public StackLinked() {
         top = null;
     }
 
@@ -31,9 +31,8 @@ public class StackLinked implements Stack {
         return data;
     }
 
-
     public boolean isEmpty() {
         return top == null;
     }
-    
+
 }
