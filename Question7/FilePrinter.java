@@ -11,8 +11,9 @@ public class FilePrinter {
             BufferedReader reader = new BufferedReader(fileReader);
             PrintWriter out = new PrintWriter(System.out);
             String fileContent;
-            while ((fileContent = reader.readLine()) != null && fileContent.startsWith("//")) {
-                out.println(fileContent);
+            while ((fileContent = reader.readLine()) != null) {
+                if (fileContent.startsWith("//"))
+                    out.println(fileContent);
             }
             reader.close();
             out.close();
